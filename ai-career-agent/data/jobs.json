@@ -1,0 +1,288 @@
+[
+  {
+    "id": 1,
+    "title": "AI/ML Engineer",
+    "company": "NovaMind",
+    "level": "Entry",
+    "skills": ["Python", "Machine Learning", "TensorFlow", "Data Pipelines", "Model Evaluation", "Statistics"]
+  },
+  {
+    "id": 2,
+    "title": "AI/ML Engineer",
+    "company": "VisionForge",
+    "level": "Entry",
+    "skills": ["Python", "PyTorch", "Machine Learning", "Feature Engineering", "Experiment Tracking", "SQL"]
+  },
+  {
+    "id": 3,
+    "title": "AI/ML Engineer",
+    "company": "CloudOrbit",
+    "level": "Entry",
+    "skills": ["Python", "Machine Learning", "MLOps", "Docker", "APIs", "Cloud"]
+  },
+  {
+    "id": 4,
+    "title": "AI/ML Engineer",
+    "company": "DataNest",
+    "level": "Entry",
+    "skills": ["Python", "Statistics", "Data Pipelines", "TensorFlow", "Model Evaluation", "SQL"]
+  },
+  {
+    "id": 5,
+    "title": "AI/ML Engineer",
+    "company": "BlueMetric",
+    "level": "Entry",
+    "skills": ["Python", "PyTorch", "Machine Learning", "Feature Engineering", "MLOps", "Experiment Tracking"]
+  },
+
+  {
+    "id": 6,
+    "title": "Backend Engineer",
+    "company": "ByteForge",
+    "level": "Entry",
+    "skills": ["Python", "REST APIs", "SQL", "Docker", "Git", "Testing"]
+  },
+  {
+    "id": 7,
+    "title": "Backend Engineer",
+    "company": "StackFlow",
+    "level": "Entry",
+    "skills": ["Java", "REST APIs", "Databases", "Testing", "Git", "Linux"]
+  },
+  {
+    "id": 8,
+    "title": "Backend Engineer",
+    "company": "RouteLabs",
+    "level": "Entry",
+    "skills": ["Python", "APIs", "SQL", "Distributed Systems", "Docker", "CI/CD"]
+  },
+  {
+    "id": 9,
+    "title": "Backend Engineer",
+    "company": "CoreBridge",
+    "level": "Entry",
+    "skills": ["Java", "Databases", "REST APIs", "Cloud", "Testing", "Security"]
+  },
+  {
+    "id": 10,
+    "title": "Backend Engineer",
+    "company": "SignalBase",
+    "level": "Entry",
+    "skills": ["Python", "SQL", "APIs", "Linux", "Debugging", "CI/CD"]
+  },
+
+  {
+    "id": 11,
+    "title": "Cloud Engineer",
+    "company": "SkyGrid",
+    "level": "Entry",
+    "skills": ["AWS", "Docker", "Kubernetes", "Terraform", "Linux", "Networking"]
+  },
+  {
+    "id": 12,
+    "title": "Cloud Engineer",
+    "company": "InfraPulse",
+    "level": "Entry",
+    "skills": ["AWS", "Cloud", "CI/CD", "Terraform", "Monitoring", "Linux"]
+  },
+  {
+    "id": 13,
+    "title": "Cloud Engineer",
+    "company": "OrbitScale",
+    "level": "Entry",
+    "skills": ["AWS", "Docker", "Kubernetes", "Scripting", "Networking", "Security"]
+  },
+  {
+    "id": 14,
+    "title": "Cloud Engineer",
+    "company": "DeployOps",
+    "level": "Entry",
+    "skills": ["Cloud", "CI/CD", "Terraform", "Monitoring", "Linux", "IAM"]
+  },
+  {
+    "id": 15,
+    "title": "Cloud Engineer",
+    "company": "NimbusStack",
+    "level": "Entry",
+    "skills": ["AWS", "Docker", "Kubernetes", "IAM", "Scripting", "Troubleshooting"]
+  },
+
+  {
+    "id": 16,
+    "title": "Security Analyst",
+    "company": "ShieldPoint",
+    "level": "Entry",
+    "skills": ["Security", "Networking", "Linux", "Monitoring", "Incident Response", "Scripting"]
+  },
+  {
+    "id": 17,
+    "title": "Security Analyst",
+    "company": "ThreatWave",
+    "level": "Entry",
+    "skills": ["Security", "IAM", "Cloud", "Monitoring", "Debugging", "APIs"]
+  },
+  {
+    "id": 18,
+    "title": "Security Analyst",
+    "company": "SecureNest",
+    "level": "Entry",
+    "skills": ["Security", "Networking", "Linux", "Troubleshooting", "Scripting", "Testing"]
+  },
+  {
+    "id": 19,
+    "title": "Security Analyst",
+    "company": "ZeroTrace",
+    "level": "Entry",
+    "skills": ["Security", "Cloud", "IAM", "Monitoring", "Incident Response", "Databases"]
+  },
+  {
+    "id": 20,
+    "title": "Security Analyst",
+    "company": "RedLock Systems",
+    "level": "Entry",
+    "skills": ["Security", "Networking", "Linux", "Debugging", "APIs", "Incident Response"]
+  },
+  {
+  "id": 21,
+  "title": "AI/ML Engineer",
+  "company": "DeepLogic Labs",
+  "level": "Entry",
+  "skills": ["Python", "Machine Learning", "PyTorch", "Feature Engineering", "Data Pipelines", "Statistics"]
+},
+{
+  "id": 22,
+  "title": "AI/ML Engineer",
+  "company": "NeuroScale",
+  "level": "Entry",
+  "skills": ["Python", "TensorFlow", "Machine Learning", "Model Evaluation", "Experiment Tracking", "SQL"]
+},
+{
+  "id": 23,
+  "title": "AI/ML Engineer",
+  "company": "Predicta Systems",
+  "level": "Entry",
+  "skills": ["Python", "Machine Learning", "MLOps", "Docker", "Cloud", "APIs"]
+},
+{
+  "id": 24,
+  "title": "AI/ML Engineer",
+  "company": "VisionAI",
+  "level": "Entry",
+  "skills": ["Python", "PyTorch", "Computer Vision", "Machine Learning", "Data Pipelines", "Model Evaluation"]
+},
+{
+  "id": 25,
+  "title": "AI/ML Engineer",
+  "company": "InsightML",
+  "level": "Entry",
+  "skills": ["Python", "Statistics", "Machine Learning", "Feature Engineering", "SQL", "Experiment Tracking"]
+},
+
+{
+  "id": 26,
+  "title": "Backend Engineer",
+  "company": "ServiceCore",
+  "level": "Entry",
+  "skills": ["Python", "REST APIs", "SQL", "Docker", "Testing", "Git"]
+},
+{
+  "id": 27,
+  "title": "Backend Engineer",
+  "company": "DataFlow Systems",
+  "level": "Entry",
+  "skills": ["Java", "Databases", "REST APIs", "CI/CD", "Linux", "Testing"]
+},
+{
+  "id": 28,
+  "title": "Backend Engineer",
+  "company": "CloudBridge",
+  "level": "Entry",
+  "skills": ["Python", "APIs", "SQL", "Distributed Systems", "Docker", "Debugging"]
+},
+{
+  "id": 29,
+  "title": "Backend Engineer",
+  "company": "CoreLink",
+  "level": "Entry",
+  "skills": ["Java", "REST APIs", "Databases", "Cloud", "Git", "Security"]
+},
+{
+  "id": 30,
+  "title": "Backend Engineer",
+  "company": "LogicStack",
+  "level": "Entry",
+  "skills": ["Python", "SQL", "APIs", "Linux", "Testing", "CI/CD"]
+},
+
+{
+  "id": 31,
+  "title": "Cloud Engineer",
+  "company": "SkyOps",
+  "level": "Entry",
+  "skills": ["AWS", "Docker", "Kubernetes", "Terraform", "Linux", "Networking"]
+},
+{
+  "id": 32,
+  "title": "Cloud Engineer",
+  "company": "NimbusScale",
+  "level": "Entry",
+  "skills": ["Cloud", "CI/CD", "Terraform", "Monitoring", "Linux", "IAM"]
+},
+{
+  "id": 33,
+  "title": "Cloud Engineer",
+  "company": "DeployGrid",
+  "level": "Entry",
+  "skills": ["AWS", "Docker", "Kubernetes", "Scripting", "Networking", "Security"]
+},
+{
+  "id": 34,
+  "title": "Cloud Engineer",
+  "company": "InfraDynamics",
+  "level": "Entry",
+  "skills": ["Cloud", "Terraform", "Monitoring", "CI/CD", "Linux", "Troubleshooting"]
+},
+{
+  "id": 35,
+  "title": "Cloud Engineer",
+  "company": "ScaleForge",
+  "level": "Entry",
+  "skills": ["AWS", "Docker", "Kubernetes", "IAM", "Scripting", "Networking"]
+},
+
+{
+  "id": 36,
+  "title": "Security Analyst",
+  "company": "CyberShield",
+  "level": "Entry",
+  "skills": ["Security", "Networking", "Linux", "Monitoring", "Incident Response", "Scripting"]
+},
+{
+  "id": 37,
+  "title": "Security Analyst",
+  "company": "ThreatSecure",
+  "level": "Entry",
+  "skills": ["Security", "IAM", "Cloud", "Monitoring", "Debugging", "APIs"]
+},
+{
+  "id": 38,
+  "title": "Security Analyst",
+  "company": "SecureOps",
+  "level": "Entry",
+  "skills": ["Security", "Networking", "Linux", "Troubleshooting", "Scripting", "Testing"]
+},
+{
+  "id": 39,
+  "title": "Security Analyst",
+  "company": "ZeroGuard",
+  "level": "Entry",
+  "skills": ["Security", "Cloud", "IAM", "Monitoring", "Incident Response", "Databases"]
+},
+{
+  "id": 40,
+  "title": "Security Analyst",
+  "company": "RedTeam Labs",
+  "level": "Entry",
+  "skills": ["Security", "Networking", "Linux", "Debugging", "APIs", "Incident Response"]
+}
+]

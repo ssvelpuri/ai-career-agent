@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Career Agent</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="page">
+        <header class="hero">
+            <h1>AI Career Agent</h1>
+            <p>Personalized skill-gap analysis, learning roadmap, and mock interview prep for early-career candidates.</p>
+        </header>
+
+        <main class="grid">
+            <section class="card input-card">
+                <h2>1. Resume Analysis</h2>
+                <form method="POST">
+                    <label for="target_role">Target role</label>
+                    <select id="target_role" name="target_role">
+                        {% for role in roles %}
+                            <option value="{{ role }}" {% if form_data.target_role == role %}selected{% endif %}>{{ role }}</option>
+                        {% endfor %}
+                    </select>
+
+                    <label for="resume_text">Resume text</label>
+                    <textarea id="resume_text" name="resume_text" rows="14" placeholder="Paste a synthetic resume here...">{{ form_data.resume_text }}</textarea>
+
+                    <label for="manual_skills">Manual skill corrections (comma-separated, optional)</label>
+                    <input id="manual_skills" name="manual_skills" type="text" value="{{ form_data.manual_skills }}" placeholder="Example: Docker, AWS">
+
+                    <label class="checkbox-row">
+                        <input type="checkbox" name="simulate_ai_failure" {% if form_data.simulate_ai_failure %}checked{% endif %}>
+                        Simulate AI failure to demo fallback mode
+                    </label>
+
+                    <button type="submit">Analyze Resume</button>
+                </form>
+            </section>
+
+            <section class="card results-card">
+                <h2>2. Results</h2>
+
+                {% if result and result.error %}
+                    <div class="alert error">{{ result.error }}</div>
+                {% elif result %}
+                    <div class="meta-row">
+                        <span class="badge">Extraction: {{ result.extraction_method }}</span>
+                        <span class="badge">Generation: {{ result.generation_method }}</span>
+                    </div>
+
+                    {% for warning in result.warnings %}
+                        <div class="alert warning">{{ warning }}</div>
+                    {% endfor %}
+
+                    <div class="result-block">
+                        <h3>Extracted Skills</h3>
+                        <div class="pill-row">
+                            {% for skill in result.extracted_skills %}
+                                <span class="pill">{{ skill }}</span>
+                            {% endfor %}
+                            {% if not result.extracted_skills %}
+                                <p class="muted">No skills detected.</p>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="result-block two-col">
+                        <div>
+                            <h3>Matched Skills</h3>
+                            <ul>
+                                {% for skill in result.matched_skills %}
+                                    <li>{{ skill }}</li>
+                                {% endfor %}
+                                {% if not result.matched_skills %}
+                                    <li class="muted">No matched skills yet.</li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Missing Skills</h3>
+                            <input type="text" id="skillSearch" placeholder="Search missing skills..." onkeyup="filterSkills()">
+                            <ul id="missingSkillsList">
+                                {% for item in result.missing_skill_details %}
+                                    <li data-skill="{{ item.skill|lower }}">
+                                    {{ item.skill }}
+                                    <span class="muted"><strong>{{ item.demand_label }}</strong> in target-role postings</span>
+                                    </li>
+                                {% endfor %}
+                                {% if not result.missing_skill_details %}
+                                    <li class="muted">No missing skills. Great match.</li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="result-block">
+                        <h3>Learning Roadmap</h3>
+                        {% for item in result.roadmap %}
+                            <div class="roadmap-item">
+                                <h4>{{ item.skill }}</h4>
+                                <p>{{ item.reason }}</p>
+                                <ol>
+                                    {% for action in item.actions %}
+                                        <li>{{ action }}</li>
+                                    {% endfor %}
+                                </ol>
+                            </div>
+                        {% endfor %}
+                        {% if not result.roadmap %}
+                            <p class="muted">No roadmap needed.</p>
+                        {% endif %}
+                    </div>
+
+                    <div class="result-block">
+                        <h3>Mock Interview Questions</h3>
+                        <ol>
+                            {% for question in result.interview_questions %}
+                                <li>{{ question }}</li>
+                            {% endfor %}
+                        </ol>
+                    </div>
+                {% else %}
+                    <p class="muted">Paste a synthetic resume and choose a role to generate personalized results.</p>
+                {% endif %}
+            </section>
+        </main>
+    </div>
+
+    <script>
+        function filterSkills() {
+            const query = document.getElementById('skillSearch').value.toLowerCase();
+            const items = document.querySelectorAll('#missingSkillsList li');
+            items.forEach((item) => {
+                const skill = item.getAttribute('data-skill');
+                if (!skill || skill.includes(query)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
